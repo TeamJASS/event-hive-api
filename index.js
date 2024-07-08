@@ -1,14 +1,16 @@
 import express from "express";
+import mongoose from "mongoose"
 
-// DB CONNECTION
+// String for Database connection
+await mongoose.connect(process.env.MONGO_URI);
 
-
-//USE EXPRESS 
+//Use express
 const app = express();
 
 
 
-// server set up
+
+// Server set up
 app.listen (4040,() => {
     console.log ("Live on 4040")
 })
